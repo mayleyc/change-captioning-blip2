@@ -186,7 +186,7 @@ def main_easy():
 
     try:
         # Step 1.5: Retrieve the positions for the easy dataset
-        answer_step1_batch(image_folder, prompt_position, output_name,'answers_step1_position_easy')
+        answer_step1_batch(image_folder_easy, prompt_position, 'answers_step1_position_easy')
     except Exception as e:
         print(f"Error in retrieving answers for easy dataset: {e}")
         return
