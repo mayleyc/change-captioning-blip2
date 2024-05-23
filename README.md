@@ -7,4 +7,4 @@ Instructions:
 - Download the dataset at: https://drive.google.com/drive/folders/16kBcXa9lmqobrpqSq72oetGiL95b3ia7?usp=sharing
 - Unzip the dataset in the same folder as the main.py file
 - Run main.py using
-'python3 main.py'
+`python3 main.py`
