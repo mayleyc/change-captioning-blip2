@@ -106,7 +106,7 @@ def export_csv_step1(correct_images, output_name):
   df = pd.DataFrame(list(correct_images.items()), columns=['Correct_Img','Answer'])
   df.to_csv(output_name+'.csv', index=False)
 
-def answer_step2_batch(image_folder, csv_path, prompt, diff, output_name): #diff: easy (0) or hard (1)
+def answer_step2_batch(image_folder, csv_path, diff, output_name): #diff: easy (0) or hard (1)
   input_data = pd.read_csv(csv_path)
 
   # Create an empty list to store dictionaries of {image_name, prompt, answer}
@@ -126,7 +126,7 @@ def answer_step2_batch(image_folder, csv_path, prompt, diff, output_name): #diff
         '''
       elif diff == 0:
         image_name = row['filename'].replace('easy','combined') + '.png'
-        prompt_easy = f'''
+        prompt = f'''
         On a 4x4 grid, move left, right, up, or down to go from cell {pos_before} to cell {pos_after} and stop when you have reached cell {pos_after}. Answer:
         '''
       # Load the image
