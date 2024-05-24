@@ -53,7 +53,6 @@ image_folder_hard = './dataset_categd/output_hard_combined'
 
 # Define BLIP-2 prompt
 prompt_detection = "On the left is before the change, and on the right is after the change. Which object has changed between the two images? Answer:" #"On the left is the grid before the change, and on the right is the grid after the change. There are five objects on both pictures: the plus sign, the circle, the triangle, the square, the star. Which object has moved? Answer:"
-prompt_position = "There are 16 cells on the grid. The {ans} is in cell number"
 # The more extensive the description, the more likely it is for BLIP-2 to be biased, since BLIP-2 is a bag-of-words. A short prompt is ideal.
 # Define BLIP-2 prompt
 def answer_step1_batch(image_folder, prompt, output_name): # Output name without the .csv extension
@@ -184,12 +183,6 @@ def main_easy():
         print(f"Error in exporting correct images for easy dataset: {e}")
         return
 
-    try:
-        # Step 1.5: Retrieve the positions for the easy dataset
-        answer_step1_batch(image_folder_easy, prompt_position, 'answers_step1_position_easy')
-    except Exception as e:
-        print(f"Error in retrieving answers for easy dataset: {e}")
-        return
     try:
         # Step 2: Process easy dataset for path planning
         answer_step2_batch(image_folder_easy, easy_annotation, 0, 'answers_step2_easy')
