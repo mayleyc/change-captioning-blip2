@@ -2,6 +2,9 @@
 A project to assess the change captioning and path finding ability of BLIP-2.
 
 Successfully ran on a T4 graphics card. 16GB of RAM is needed.
+Requirements for dataset.py:
+- pandas==2.0.3
+- pygame==2.5.2
 
 **Installation:**
 - Download the dataset at: https://drive.google.com/drive/folders/16kBcXa9lmqobrpqSq72oetGiL95b3ia7?usp=sharing
