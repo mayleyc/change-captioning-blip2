@@ -2,12 +2,9 @@
 A project to assess the change captioning and path finding ability of BLIP-2.
 
 Successfully ran on a T4 graphics card. 16GB of RAM is needed.
-The dataset can be generated via:
-https://colab.research.google.com/drive/1RF2BaKa2jUmwIwLYSM0UXX2RGHnEsEYx
 
 **Installation:**
 - Download the dataset at: https://drive.google.com/drive/folders/16kBcXa9lmqobrpqSq72oetGiL95b3ia7?usp=sharing
-(Else, generate the dataset using dataset.py and the sprites folder)
 - Unzip the dataset in the same folder as the main.py file
 - Open an interpreter with virtual environments. Create a new virtual environment and install the needed modules using
 
