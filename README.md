@@ -16,5 +16,4 @@ After the program downloads the necessary shards of BLIP-2, the program will pro
 **The output includes:**
 - answers_step1: The original answers (change captioning) by BLIP-2.
 - output_step1: Accurate change captioning answers only.
-- (easy only) answers_step1_position: Attempts of BLIP-2 to read the agent's position on the grid
 - answer_step2_batch: Attempts at path-planning. You can test it on a longer prompt with a model question and answer. It would most likely repeat the model answer that you have provided.
